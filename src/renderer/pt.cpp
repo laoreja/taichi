@@ -750,6 +750,7 @@ class MCMCPTRenderer : public PathTracingRenderer {
     PathTracingRenderer::initialize(config);
     large_step_prob = config.get("large_step_prob", 0.3f);
     estimation_rounds = config.get("estimation_rounds", 1);
+    std::cout << "estimation_rounds" << estimation_rounds << std::endl;
     mutation_strength = config.get<real>("mutation_strength");
     buffer.initialize(Vector2i(width, height), Vector3(0.0_f));
     sample_count = 0;
