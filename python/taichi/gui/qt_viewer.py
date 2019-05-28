@@ -37,7 +37,8 @@ def create_window(name, img):
   if name not in viewers:
     signal = {}
     signal[0] = False
-    def task():
+#    def task():
+    if True:
       global app
       if app is None:
         app_ = QApplication(sys.argv)
@@ -51,10 +52,10 @@ def create_window(name, img):
         app.processEvents()
         ex.show()
         time.sleep(0.01)
-    th = threading.Thread(target=task)
-    th.start()
-    while not signal[0]:
-      pass
+#    th = threading.Thread(target=task)
+#    th.start()
+#    while not signal[0]:
+#      pass
   else:
     viewers[name].update(img)
   
